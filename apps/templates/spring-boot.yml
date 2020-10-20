@@ -12,5 +12,5 @@ spec:
   project: default
   source:
     path: demoweb/charts/springboot-demoweb
-    repoURL: {{ .Values.spec.source.repoURL }}
+    repoURL: https://github.com/ananyahn/springboot-helm-chart
     targetRevision: {{ .Values.spec.source.targetRevision }}
