@@ -11,6 +11,6 @@ spec:
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    path: stable/wordpress
-    repoURL: https://github.com/helm/charts
+    path: charts/argo-cd/charts/redis-ha/
+    repoURL: https://github.com/argoproj/argo-helm
     targetRevision: {{ .Values.spec.source.targetRevision }}
