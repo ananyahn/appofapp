@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: spring-boot
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: spring-boot
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: stable/redis
+    repoURL: https://github.com/helm/charts
+    targetRevision: {{ .Values.spec.source.targetRevision }}
