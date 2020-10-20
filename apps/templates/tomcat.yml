@@ -12,5 +12,5 @@ spec:
   project: default
   source:
     path: stable/tomcat
-    repoURL: https://github.com/helm/charts
+    repoURL: https://github.com/ananyahn/charts
     targetRevision: {{ .Values.spec.source.targetRevision }}
