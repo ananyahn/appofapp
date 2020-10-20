@@ -11,6 +11,6 @@ spec:
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    path: stable/nginx-ingress
+    path: stable/wordpress
     repoURL: https://github.com/helm/charts
     targetRevision: {{ .Values.spec.source.targetRevision }}
