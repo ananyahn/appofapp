@@ -12,5 +12,5 @@ spec:
   project: default
   source:
     path: helloworld
-    repoURL: https://github.com/stakater-charts/helloworld
+    repoURL: https://github.com/ananyahn/helloworld.git
     targetRevision: {{ .Values.spec.source.targetRevision }}
