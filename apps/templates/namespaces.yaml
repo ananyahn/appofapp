@@ -15,7 +15,7 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: nginx
+  name: wordpress
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
 
