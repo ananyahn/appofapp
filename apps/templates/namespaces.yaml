@@ -15,7 +15,7 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: tomcat
+  name: spring-boot1
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
 
