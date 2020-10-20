@@ -1,16 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: tomcat
+  name: spring-boot1
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: tomcat
+    namespace: spring-boot1
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    path: stable/tomcat
-    repoURL: https://github.com/ananyahn/charts
+    path: demoweb/charts/springboot-demoweb
+    repoURL: https://github.com/ananyahn/springboot-helm-chart
     targetRevision: {{ .Values.spec.source.targetRevision }}
+
