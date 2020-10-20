@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nodejs
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: nodejs
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: chart/hello
+    repoURL: https://github.com/open-toolchain/hello-helm
+    targetRevision: {{ .Values.spec.source.targetRevision }}
