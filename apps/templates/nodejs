@@ -11,6 +11,6 @@ spec:
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    path: chart/hello
-    repoURL: https://github.com/open-toolchain/hello-helm
+    path: helloworld
+    repoURL: https://github.com/stakater-charts/helloworld
     targetRevision: {{ .Values.spec.source.targetRevision }}
