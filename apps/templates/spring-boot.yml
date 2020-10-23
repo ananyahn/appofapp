@@ -16,4 +16,4 @@ spec:
     targetRevision: {{ .Values.spec.source.targetRevision }}
     helm:
       valueFiles:
-      - values-prod.yaml
+      - value-spring.yaml
