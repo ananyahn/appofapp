@@ -14,3 +14,6 @@ spec:
     path: demoweb/charts/springboot-demoweb
     repoURL: https://github.com/ananyahn/springboot-helm-chart
     targetRevision: {{ .Values.spec.source.targetRevision }}
+    helm:
+      valueFiles:
+      - values-prod.yaml
