@@ -15,5 +15,5 @@ spec:
     repoURL: https://github.com/ananyahn/springboot-helm-chart
     targetRevision: {{ .Values.spec.source.targetRevision }}
     helm:
-      valueFiles:
-      - value-spring.yaml
+      values: |
+        replicaCount: 2
