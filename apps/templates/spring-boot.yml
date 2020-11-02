@@ -16,6 +16,6 @@ spec:
     targetRevision: {{ .Values.spec.source.targetRevision }}
     helm:
         values: |
-           replicaCount: 2
+           {{ .Files.Get "values-prod.yml" }}
   
         
