@@ -16,6 +16,10 @@ spec:
     targetRevision: {{ .Values.spec.source.targetRevision }}
     helm:
         values: |
-           {{ .Files.Get "values-prod.yml" }}
+          {{ range .Files.Lines "values-prod.yml" }}
+          {{ . }}{{ end }}
+           
+           
+           
   
         
