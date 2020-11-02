@@ -15,5 +15,10 @@ spec:
     repoURL: https://github.com/ananyahn/springboot-helm-chart
     targetRevision: {{ .Values.spec.source.targetRevision }}
     helm:
-      values: |
-        replicaCount: 2
+        {{- $files := .Files }}
+        {{- range tuple "values-prod.yml"  }}
+        {{ . }}: |-
+        {{ $files.Get . }}
+        {{- end }}    
+  
+        
