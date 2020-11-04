@@ -20,7 +20,7 @@ spec:
     targetRevision: {{ .Values.spec.source.targetRevision }}
     helm:
         values: |
-          {{ range .Files.Lines "values.yml" }}
+          {{ range .Files.Lines "values.yaml" }}
           {{ . }}{{ end }}
            
            
