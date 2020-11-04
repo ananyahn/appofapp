@@ -15,9 +15,7 @@ spec:
     repoURL: https://github.com/ananyahn/helloworld.git
     targetRevision: {{ .Values.spec.source.targetRevision }}
     helm:
-        {{- $files := .Files }}
-        {{- range tuple "values-prod.yml"  }}
-        {{ . }}: |-
-        {{ $files.Get . }}
-        {{- end }}    
+        values: |
+          {{ range .Files.Lines "values-prod.yml" }}
+          {{ . }}{{ end }} 
   
