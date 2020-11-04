@@ -11,7 +11,7 @@ spec:
       prune: true 
       selfHeal: true 
   destination:
-    namespace: spring-boot
+    namespace: {{ .Values.namespace }}
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
