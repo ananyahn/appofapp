@@ -1,6 +1,4 @@
-service: 
-  type: LoadBalancer
-replicaCount: 3
+namespace: master
 spec:
   destination:
     server: https://kubernetes.default.svc
